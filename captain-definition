@@ -1,4 +1,4 @@
 {
   "schemaVersion": 2,
-  "dockerfilePath": "./Dockerfile""customNginxConfig": "location /files/ { add_header Access-Control-Allow-Origin *; add_header Access-Control-Allow-Methods 'GET, OPTIONS'; add_header Access-Control-Allow-Headers 'Content-Type, x-upload-secret'; }"
+  "customNginxConfig": "location /files/ { add_header Access-Control-Allow-Origin *; add_header Access-Control-Allow-Methods 'GET, OPTIONS'; add_header Access-Control-Allow-Headers 'Content-Type, x-upload-secret'; }"
 }
