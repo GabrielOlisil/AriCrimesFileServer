@@ -3,9 +3,18 @@ import multer from "multer";
 import fs from "fs";
 import path from "path";
 import { randomUUID } from "crypto";
+import cors from "cors";
+
 
 
 const app = express();
+
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "x-upload-secret"]
+}));
+
 const port = process.env.PORT || 3000;
 const secret = process.env.UPLOAD_SECRET;
 const uploadDir = process.env.UPLOAD_DIR || "uploads";
